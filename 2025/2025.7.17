@@ -1,0 +1,9 @@
+1.`my_foods = ['pizza','falafel','carrot cake']  
+   `friend_foods = my_foods`  
+   这相当于给这个列表起两个名字。  
+2.`car = 'audi'`  
+   `car.lower() == 'audi'`  
+   lower()方法不会修改储存在变量car中的值  
+3.将列表名作为if的条件表达式时，如果列表为空，则为Fasle  
+   至少包含一个元素，返回True.  
+4.字典的键和值  
