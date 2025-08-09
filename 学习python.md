@@ -15,3 +15,5 @@
 >`filename.removesuffix('.txt')`会检查`filename`字符串的末尾是否是`.txt`  
 >如果是就删除，并返回不带后缀的字符串  
 >如果不是就直接返回字符串  
+>`removesuffix('.txt')`是把`'.txt'`当作一个完整的，固定的字符串来匹配  
+>`rstrip('.txt')`：把`'.xt'`当作一个字符集合`{'.', 't', 'x'}来处理  
