@@ -4,7 +4,7 @@
 >全小写：lower()  
 >全大写：upper()  
 >每个单词首字母大写：title()
->4.
+---
 >s.lstrip([chars]):从左侧开始删，直到遇到第一个不在chars集合的字符为止
 >s.rstrip([chars]):从右侧开始删，直到遇到第一个不在chars集合的字符为止
 >s.strip([chars]):左右都删  
