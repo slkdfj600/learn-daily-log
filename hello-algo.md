@@ -15,4 +15,5 @@ struct ListNode{
 ```
 
 - `struct`和`class`的区别是：`struct`默认成员是public,`class`默认成员是private
+- `next`的类型是：指向`ListNode`的指针
 - 
