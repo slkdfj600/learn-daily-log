@@ -13,3 +13,6 @@ struct ListNode{
         : val(v), next(n) {}
 };
 ```
+
+- `struct`和`class`的区别是：`struct`默认成员是public,`class`默认成员是private
+- 
