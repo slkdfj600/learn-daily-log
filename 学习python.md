@@ -16,4 +16,42 @@
 >如果是就删除，并返回不带后缀的字符串  
 >如果不是就直接返回字符串  
 >`removesuffix('.txt')`是把`'.txt'`当作一个完整的，固定的字符串来匹配  
->`rstrip('.txt')`：把`'.xt'`当作一个字符集合`{'.', 't', 'x'}来处理  
+>`rstrip('.txt')`：把`'.xt'`当作一个字符集合`{'.', 't', 'x'}来处理
+
+ ---
+
+ ```python
+from typing import List
+
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+#在定义函数时使用了类型提示
+#nums要是元素为int类型的列表
+#target的类型也为int
+        l, r = 0, len(nums) -1 
+
+        while l <= r:
+            mid = (l + r) // 2
+            if nums[mid] < target:
+                l = mid + 1
+            elif nums[mid] > target:
+                r = mid - 1
+            else:
+                return mid
+        
+        return -1
+            
+if __name__ == "__main__":
+    sol = Solution()
+    
+    array1 = [-1, 0 ,3, 5, 9, 12]
+    
+    t1 = 9
+    t2 = 2
+    
+    result1 = sol.search(array1, t1)
+    result2 = sol.search(array1, t2)
+    
+    print(result1)
+    print(result2)
+```
