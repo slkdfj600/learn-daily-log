@@ -28,6 +28,7 @@ class Solution:
 #在定义函数时使用了类型提示
 #nums要是元素为int类型的列表
 #target的类型也为int
+#返回值为int
         l, r = 0, len(nums) -1 
 
         while l <= r:
