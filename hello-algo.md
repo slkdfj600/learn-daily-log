@@ -67,10 +67,10 @@ class LinkedListStack   //有这么一个类
 //s2 = s1;    会报错
     
     private:
-        ListNode* stackTop;
-        int stakSize;
-
-        void freeMemoryLinkedList(ListNode* head);
+        ListNode* stackTop;    //有这么一个私有成员变量
+        int stakSize;          //有这么一个私有成员变量
+//私有成员变量只能被类内部的成员函数访问
+        void freeMemoryLinkedList(ListNode* head);    //有这么一个私有成员函数
 };
 ``` 
 
