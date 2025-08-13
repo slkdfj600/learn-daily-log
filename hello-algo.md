@@ -61,6 +61,8 @@ class LinkedListStack   //有这么一个类
         LinkedListStack(const LinkedListStack&) = delete;
 //声明拷贝构造函数地同时，标记为已删除
 //意思是，这个类不允许被拷贝
+//LinkedListStack s2 = s1;    会报错
+//
         LinkedListStack& operator = (const LinkedListStack&) = delete;
     
     private:
