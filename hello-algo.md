@@ -38,6 +38,35 @@ struct ListNode{
 
 ---
 
-`pragma once`的作用是防止头文件被重复包含  
+```cpp
+#pragma once        //防止头文件被重复包含
+
+struct ListNode;    //有这么一个结构体
+
+class LinkedListStack   //有这么一个类
+{
+    public:    //类的公开接口
+        LinkedListStack();      //有这么一个构造函数
+        ~LinkedListStack();     //有这么一个析构函数
+
+        void push(int v);       //有这么一个成员函数
+        void pop();             //有这么一个成员函数
+        int top() const;        //有这么一个成员函数
+//const 放在成员函数后面，被称为const成员函数
+//向编译器和程序员做出承诺
+//这个函数是一个“只读”操作，不会修改任何成员变量
+        bool empty() const;     //有这么一个成员函数
+        int size() const;       //有这么一个成员函数
+
+        LinkedListStack(const LinkedListStack&) = delete;
+        LinkedListStack& operator = (const LinkedListStack&) = delete;
+    
+    private:
+        ListNode* stackTop;
+        int stakSize;
+
+        void freeMemoryLinkedList(ListNode* head);
+};
+``` 
 
 
