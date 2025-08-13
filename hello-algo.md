@@ -63,6 +63,8 @@ class LinkedListStack   //有这么一个类
 //意思是，这个类不允许被拷贝
 //LinkedListStack s2 = s1;    会报错
         LinkedListStack& operator = (const LinkedListStack&) = delete;
+//LinkedListStack s1, s2;
+//s2 = s1;    会报错
     
     private:
         ListNode* stackTop;
