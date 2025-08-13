@@ -23,3 +23,6 @@ struct ListNode{
 - 创建对象的时候直接：
 - `ListNode n1(10, &n1);`
 - 则，`val = 10, next = &n1`
+
+
+析构函数在对象生命周期结束后被自动调用  
