@@ -75,6 +75,7 @@ class LinkedListStack   //有这么一个类
 };
 ``` 
 ```cpp
+//common.hpp
 #pragma once
 
 #include <algorithm>	//算法函数
@@ -100,4 +101,64 @@ using namespace std;
 
 ```
 
+```cpp
+//array_stack.cpp
+
+#include "../utils/common.hpp"
+//		../是当前文件的上一级目录的意思
+
+//基于数组实现的栈
+class ArrayStack
+{
+	private://私有成员
+		vector<int> stack;
+
+//public;private;protected,是用来限制外部对类成员
+//访问的，不是限制类内部成员之间的访问
+
+//class func{}:房子的外墙
+//public成员:房子的前门和门铃
+//private成员:房子的卧室和保险箱
+
+	public:
+		//获取栈的长度
+		int size()
+		{
+			return stack.size();
+		}	
+
+		//判断栈是否为空
+		bool isEmpty()
+		{
+			return stack.size() == 0;
+		}
+
+		//入栈
+		void push(int num)
+		{
+			stack.push_back(num);
+		}
+
+		//出栈
+		int pop()
+		{
+			int num = top();
+			stack.pop_back();
+			return num;
+		}
+
+		//访问栈顶元素
+		int top()
+		{
+			if(isEmpty())
+			{
+				throw out_of_range("栈为空");
+			}
+
+			return stack.back();
+			//.back()只查看最后一个元素
+		}
+}
+
+```
 
