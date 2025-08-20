@@ -143,7 +143,7 @@ class ArrayStack
 		int pop()
 		{
 			int num = top();
-			stack.pop_back();
+			stack.pop_back();	//删除容器最后一个元素
 			return num;
 		}
 
@@ -152,13 +152,56 @@ class ArrayStack
 		{
 			if(isEmpty())
 			{
-				throw out_of_range("栈为空");
+				throw out_of_range("栈为空");	//错误处理
 			}
 
 			return stack.back();
 			//.back()只查看最后一个元素
 		}
-}
 
+		//输出一个副本
+		vector<int> toVector()
+		{
+			return stack;
+		}
+};
+
+int main()
+{
+	ArrayStack* stack = new ArrayStack();
+//	ArrayStack*:一个指向ArrayStack类型的指针的类型
+//	stack:指针名字
+//	new：在堆上申请内存
+//	ArratStack():构造函数的调用，创建了ArrayStack类的对象
+
+	stack->push(1);
+//	如果我的变量是一个对象，就用点.
+//	如果我的变量是一个指针，就用箭头->
+	stack->push(3);
+	stack->push(2);
+	stack->push(5);
+	stack->push(4);
+	cout<<"栈 stack = ";
+	printVector(stack->toVector());
+
+	int top = stack->top();
+	cout<<"栈顶元素 top = "<< top <<endl;
+
+	top = stack->pop();
+	cout<< "出栈元素 pop = "<< top <<"出栈后 stack = ";
+	printVector(stack->toVector());
+
+	int size = stack->size();
+	cout<<"栈的长度 size = "<<size <<endl;
+
+	bool empty = stack->isEmpty();
+	cout<< "栈是否为空 = " <<empty <<endl;
+
+	delete stack;
+//	这是一个指针
+//	释放堆上的内存
+
+	return 0;
+}
 ```
 
