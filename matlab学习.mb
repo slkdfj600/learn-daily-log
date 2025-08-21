@@ -1,0 +1,16 @@
+clc;clear;
+%%清空命令行窗口，工作区
+data = xlsread("tututu1.xlsx");
+%%读取数据
+figure
+%%生成一个matlab的GUI界面
+hold on
+%%绘图的过程中保持GUI界面不动
+%%在原有的图形上叠加
+for i=1:6
+    plot(data(:,1),data(:,i+1))
+end
+%%plot(X, Y): 这是MATLAB中最基本的二维绘图函数，它需要两组数据：X坐标和Y坐标。
+legend('GroupA','GroupB','GroupC','GroupD','GroupE','GroupF','Location','eastoutside');
+%%创建图例
+%%Location设置图例的位置
