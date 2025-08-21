@@ -1,3 +1,4 @@
+```matlab
 clc;clear;
 %%清空命令行窗口，工作区
 data = xlsread("tututu1.xlsx");
@@ -14,3 +15,5 @@ end
 legend('GroupA','GroupB','GroupC','GroupD','GroupE','GroupF','Location','eastoutside');
 %%创建图例
 %%Location设置图例的位置
+```
+
