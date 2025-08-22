@@ -205,3 +205,15 @@ int main()
 }
 ```
 
+---
+
+实例化的意思是，从类中创造一个对象出来  
+**直接实例化**：`LinkedListStack stack`  
+
+- 栈上分配内存，用.运算符
+
+**使用new**：`LinkedListStack* stack = new LinkedListStack()`  
+
+- 堆上分配内存，用->运算符，返回的是指针类型
+
+
